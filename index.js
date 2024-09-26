@@ -36,6 +36,10 @@ app.post('/register', (req, res) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send("App is running..");
+});
+
 // Login Route
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
