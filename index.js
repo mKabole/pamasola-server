@@ -5,6 +5,8 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 
 const app = express();
+
+const router = express.Router();
 const port = 5000;
 const SECRET_KEY = 'your_secret_key';
 
@@ -54,7 +56,10 @@ app.post('/login', (req, res) => {
   });
 });
 
+app.use("/.netlify/functions/app", router);
+module.exports.handler = serverless(app);
+
 // Start the server
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Server running on http://localhost:${port}`);
+// });
