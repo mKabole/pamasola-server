@@ -29,5 +29,7 @@ This is the backend for the customer authentication app. It provides REST API en
 
 ### 1. Clone the repository
 ```bash
-git clone <repository-url>
-cd customer-auth-backend
+git clone https://github.com/mKabole/pamasola-server.git
+cd pamasola-server
+npm install
+node index.js
