@@ -56,10 +56,10 @@ app.post('/login', (req, res) => {
   });
 });
 
-app.use("/.netlify/functions/app", router);
-module.exports.handler = serverless(app);
+// app.use("/.netlify/functions/app", router);
+// module.exports.handler = serverless(app);
 
 // Start the server
-// app.listen(port, () => {
-//   console.log(`Server running on http://localhost:${port}`);
-// });
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});
